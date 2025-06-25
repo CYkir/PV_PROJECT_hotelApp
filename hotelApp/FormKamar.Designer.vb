@@ -233,7 +233,7 @@ Partial Class FormKamar
         btnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnEdit.Size = New Size(130, 47)
         btnEdit.TabIndex = 12
-        btnEdit.Text = "Edit"
+        btnEdit.Text = "Update"
         ' 
         ' btnHapus
         ' 
