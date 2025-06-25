@@ -121,7 +121,16 @@
   <data name="Rectangle 128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Group 17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo hotel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo hotel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sidebar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sidebar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sidebarfix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sidebarfix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
