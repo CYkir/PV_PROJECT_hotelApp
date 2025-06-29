@@ -148,7 +148,7 @@ Partial Class Form1
         txtDaftarKamar.Font = New Font("Roboto Slab Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtDaftarKamar.Location = New Point(3, 3)
         txtDaftarKamar.Name = "txtDaftarKamar"
-        txtDaftarKamar.Size = New Size(773, 46)
+        txtDaftarKamar.Size = New Size(773, 32)
         txtDaftarKamar.TabIndex = 4
         txtDaftarKamar.Text = "Daftar Kamar"
         txtDaftarKamar.TextAlignment = ContentAlignment.MiddleLeft
