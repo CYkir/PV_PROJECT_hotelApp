@@ -62,42 +62,53 @@ Bagi yang tidak bisa melakukan restore database silahkan ikutin langkah berikut 
 2. Jalankan SQL berikut di SSMS (SQL Server Management Studio) atau editor SQL lainnya:
 
 ```sql
--- Tabel TipeKamar
-CREATE TABLE TipeKamar (
-    KodeTipe VARCHAR(10) PRIMARY KEY,
-    NamaTipe VARCHAR(50)
-);
+-- Gunakan database
+USE dbHotel;
+GO
 
--- Tabel Kamar
+-- 1. Tabel TipeKamar
+CREATE TABLE TipeKamar (
+    KodeTipe NVARCHAR(10) PRIMARY KEY,
+    NamaTipe NVARCHAR(50) NOT NULL,
+    HargaPerMalam INT NOT NULL
+);
+GO
+
+-- 2. Tabel Kamar
 CREATE TABLE Kamar (
-    KodeKamar VARCHAR(10) PRIMARY KEY,
-    NoKamar VARCHAR(10),
-    KodeTipe VARCHAR(10),
-    GambarPath VARCHAR(255),
-    Status VARCHAR(20),
+    KodeKamar NVARCHAR(10) PRIMARY KEY,
+    NoKamar NVARCHAR(10) NOT NULL UNIQUE,
+    KodeTipe NVARCHAR(10) NOT NULL,
+    Status NVARCHAR(20) NOT NULL CHECK (Status IN ('Terisi', 'Kosong')),
+    GambarPath NVARCHAR(255),
     FOREIGN KEY (KodeTipe) REFERENCES TipeKamar(KodeTipe)
 );
+GO
 
--- Tabel Pengunjung
+-- 3. Tabel Pengunjung
 CREATE TABLE Pengunjung (
-    KodePengunjung VARCHAR(10) PRIMARY KEY,
-    NamaPengunjung VARCHAR(100),
-    NoIdentitas VARCHAR(50),
-    Alamat VARCHAR(255),
-    NoTelepon VARCHAR(20)
+    IdPengunjung NVARCHAR(10) PRIMARY KEY,
+    NoKTP NVARCHAR(20) NOT NULL UNIQUE,
+    Nama NVARCHAR(100) NOT NULL,
+    Alamat NVARCHAR(200),
+    NoTelp NVARCHAR(20)
 );
+GO
 
--- Tabel Transaksi
+-- 4. Tabel Transaksi
 CREATE TABLE Transaksi (
-    KodeTransaksi VARCHAR(10) PRIMARY KEY,
-    KodeKamar VARCHAR(10),
-    KodePengunjung VARCHAR(10),
-    TanggalCheckIn DATETIME,
-    TanggalCheckOut DATETIME,
-    TotalBayar DECIMAL(18,2),
-    FOREIGN KEY (KodeKamar) REFERENCES Kamar(KodeKamar),
-    FOREIGN KEY (KodePengunjung) REFERENCES Pengunjung(KodePengunjung)
+    KodeTransaksi NVARCHAR(10) PRIMARY KEY,
+    IdPengunjung NVARCHAR(10) NOT NULL,
+    KodeKamar NVARCHAR(10) NOT NULL,
+    TanggalMasuk DATE NOT NULL,
+    TanggalKeluar DATE NOT NULL,
+    Durasi INT NOT NULL,
+    TotalBayar INT NOT NULL,
+    FOREIGN KEY (IdPengunjung) REFERENCES Pengunjung(IdPengunjung),
+    FOREIGN KEY (KodeKamar) REFERENCES Kamar(KodeKamar)
 );
+GO
+
 ```
 
 ---
