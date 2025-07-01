@@ -21,7 +21,7 @@ Ikuti langkah-langkah berikut untuk menjalankan project ini dari awal:
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/username/hotelApp.git
+git clone https://github.com/CYkir/PV_PROJECT_hotelApp.git
 ```
 
 > Ganti `username` dengan nama pengguna GitHub kamu.
