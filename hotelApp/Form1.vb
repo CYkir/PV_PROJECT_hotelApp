@@ -20,7 +20,7 @@ Public Class Form1
             JOIN TipeKamar T ON K.KodeTipe = T.KodeTipe
         "
 
-        bukaKoneksi() ' Panggil koneksi dari modul
+        bukaKoneksi()
         Dim cmd As New SqlCommand(query, koneksi)
         Dim reader = cmd.ExecuteReader()
         Dim Count As Integer = 0
@@ -107,6 +107,11 @@ Public Class Form1
         End If
 
         ' Refresh tampilan
+        TampilkanKamar()
+    End Sub
+
+    Private Sub btnTambahKamar_Click(sender As Object, e As EventArgs) Handles btnTambahKamar.Click
+        FormKamar.ShowDialog()
         TampilkanKamar()
     End Sub
 End Class

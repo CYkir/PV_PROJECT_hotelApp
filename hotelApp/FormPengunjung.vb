@@ -14,7 +14,7 @@ Public Class FormPengunjung
             Exit Sub
         End If
 
-        ' Validasi tanggal
+        'Validasi tanggal
         Dim tanggalMasuk = dtpMasuk.Value.Date
         Dim tanggalKeluar = dtpKeluar.Value.Date
         Dim durasi = (tanggalKeluar - tanggalMasuk).Days
@@ -23,7 +23,7 @@ Public Class FormPengunjung
             Exit Sub
         End If
 
-        ' 1. Simpan data pengunjung
+        'Simpan data pengunjung
         bukaKoneksi()
         Dim cmdPengunjung As New SqlCommand("
         INSERT INTO Pengunjung (IdPengunjung, NoKTP, Nama, Alamat, NoTelp)
@@ -36,7 +36,7 @@ Public Class FormPengunjung
         cmdPengunjung.ExecuteNonQuery()
         koneksi.Close()
 
-        ' 2. Ambil harga kamar
+        'Ambil harga kamar
         bukaKoneksi()
         Dim cmdHarga As New SqlCommand("
         SELECT T.HargaPerMalam 
@@ -49,7 +49,7 @@ Public Class FormPengunjung
 
         Dim total = harga * durasi
 
-        ' 3. Simpan transaksi baru
+        ' Simpan transaksi baru
         Dim kodeTransaksi = GenerateKodeTransaksiBaru()
 
         bukaKoneksi()
@@ -66,7 +66,7 @@ Public Class FormPengunjung
         cmdTransaksi.ExecuteNonQuery()
         koneksi.Close()
 
-        ' 4. Update status kamar
+        ' Update status kamar
         bukaKoneksi()
         Dim cmdUpdate As New SqlCommand("
         UPDATE Kamar SET Status = 'Terisi' WHERE KodeKamar = @Kode", koneksi)
