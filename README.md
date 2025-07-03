@@ -97,7 +97,7 @@ GO
 
 -- 4. Tabel Transaksi
 CREATE TABLE Transaksi (
-    KodeTransaksi NVARCHAR(10) PRIMARY KEY,
+    KodeTransaksi NVARCHAR(20) PRIMARY KEY,
     IdPengunjung NVARCHAR(10) NOT NULL,
     KodeKamar NVARCHAR(10) NOT NULL,
     TanggalMasuk DATE NOT NULL,
