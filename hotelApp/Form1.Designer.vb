@@ -24,10 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         panelKamarContainer = New FlowLayoutPanel()
         btnTambahKamar = New Guna.UI2.WinForms.Guna2Button()
         TableLayoutPanel1 = New TableLayoutPanel()
@@ -36,13 +32,10 @@ Partial Class Form1
         TableLayoutPanel3 = New TableLayoutPanel()
         txtDaftarKamar = New Guna.UI2.WinForms.Guna2HtmlLabel()
         TableLayoutPanel4 = New TableLayoutPanel()
-        btnDaftarPengunjung = New Guna.UI2.WinForms.Guna2Button()
-        btnSlipPembayaran = New Guna.UI2.WinForms.Guna2Button()
         TableLayoutPanel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
-        TableLayoutPanel4.SuspendLayout()
         SuspendLayout()
         ' 
         ' panelKamarContainer
@@ -148,7 +141,7 @@ Partial Class Form1
         txtDaftarKamar.Font = New Font("Roboto Slab Medium", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtDaftarKamar.Location = New Point(3, 3)
         txtDaftarKamar.Name = "txtDaftarKamar"
-        txtDaftarKamar.Size = New Size(773, 32)
+        txtDaftarKamar.Size = New Size(773, 46)
         txtDaftarKamar.TabIndex = 4
         txtDaftarKamar.Text = "Daftar Kamar"
         txtDaftarKamar.TextAlignment = ContentAlignment.MiddleLeft
@@ -160,56 +153,12 @@ Partial Class Form1
         TableLayoutPanel4.ColumnCount = 2
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 545F))
-        TableLayoutPanel4.Controls.Add(btnDaftarPengunjung, 0, 0)
-        TableLayoutPanel4.Controls.Add(btnSlipPembayaran, 1, 0)
         TableLayoutPanel4.Location = New Point(3, 706)
         TableLayoutPanel4.Name = "TableLayoutPanel4"
         TableLayoutPanel4.RowCount = 1
         TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         TableLayoutPanel4.Size = New Size(1089, 53)
         TableLayoutPanel4.TabIndex = 8
-        ' 
-        ' btnDaftarPengunjung
-        ' 
-        btnDaftarPengunjung.BorderRadius = 15
-        btnDaftarPengunjung.Cursor = Cursors.Hand
-        btnDaftarPengunjung.CustomizableEdges = CustomizableEdges3
-        btnDaftarPengunjung.DisabledState.BorderColor = Color.DarkGray
-        btnDaftarPengunjung.DisabledState.CustomBorderColor = Color.DarkGray
-        btnDaftarPengunjung.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnDaftarPengunjung.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnDaftarPengunjung.Dock = DockStyle.Fill
-        btnDaftarPengunjung.FillColor = Color.FromArgb(CByte(255), CByte(219), CByte(91))
-        btnDaftarPengunjung.Font = New Font("Poppins Medium", 9F, FontStyle.Bold)
-        btnDaftarPengunjung.ForeColor = Color.Black
-        btnDaftarPengunjung.HoverState.FillColor = Color.Gold
-        btnDaftarPengunjung.Location = New Point(3, 3)
-        btnDaftarPengunjung.Name = "btnDaftarPengunjung"
-        btnDaftarPengunjung.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btnDaftarPengunjung.Size = New Size(538, 47)
-        btnDaftarPengunjung.TabIndex = 5
-        btnDaftarPengunjung.Text = "Daftar Pengunjung"
-        ' 
-        ' btnSlipPembayaran
-        ' 
-        btnSlipPembayaran.BorderRadius = 15
-        btnSlipPembayaran.Cursor = Cursors.Hand
-        btnSlipPembayaran.CustomizableEdges = CustomizableEdges5
-        btnSlipPembayaran.DisabledState.BorderColor = Color.DarkGray
-        btnSlipPembayaran.DisabledState.CustomBorderColor = Color.DarkGray
-        btnSlipPembayaran.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnSlipPembayaran.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnSlipPembayaran.Dock = DockStyle.Fill
-        btnSlipPembayaran.FillColor = Color.FromArgb(CByte(255), CByte(219), CByte(91))
-        btnSlipPembayaran.Font = New Font("Poppins Medium", 9F, FontStyle.Bold)
-        btnSlipPembayaran.ForeColor = Color.Black
-        btnSlipPembayaran.HoverState.FillColor = Color.Gold
-        btnSlipPembayaran.Location = New Point(547, 3)
-        btnSlipPembayaran.Name = "btnSlipPembayaran"
-        btnSlipPembayaran.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        btnSlipPembayaran.Size = New Size(539, 47)
-        btnSlipPembayaran.TabIndex = 6
-        btnSlipPembayaran.Text = "Slip Pembayaran"
         ' 
         ' Form1
         ' 
@@ -224,7 +173,6 @@ Partial Class Form1
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel3.ResumeLayout(False)
-        TableLayoutPanel4.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -236,8 +184,6 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents btnDaftarPengunjung As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnSlipPembayaran As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtDaftarKamar As Guna.UI2.WinForms.Guna2HtmlLabel
 
 End Class

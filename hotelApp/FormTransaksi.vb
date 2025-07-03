@@ -103,32 +103,6 @@ Public Class FormTransaksi
     End Function
 
 
-    'Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
-    '    If lblKodeTransaksi.Text = "" Then Exit Sub
-
-    '    Dim konfirmasi = MsgBox("Yakin ingin melakukan Check Out?", vbYesNo)
-    '    If konfirmasi = vbNo Then Exit Sub
-
-    '    bukaKoneksi()
-
-    '    ' Update status kamar menjadi Kosong
-    '    Dim cmdUpdate As New SqlCommand("
-    '        UPDATE Kamar SET Status='Kosong' WHERE KodeKamar=@Kode", koneksi)
-    '    cmdUpdate.Parameters.AddWithValue("@Kode", KodeKamarTerpilih)
-    '    cmdUpdate.ExecuteNonQuery()
-
-    '    koneksi.Close()
-
-    '    MsgBox("Check Out berhasil. Kamar sekarang kosong.")
-
-    '    ' Tampilkan form slip pembayaran
-    '    Dim formSlip As New FormSlipPembayaran
-    '    formSlip.KodeTransaksiTerpilih = lblKodeTransaksi.Text
-    '    formSlip.ShowDialog()
-
-    '    Me.Close()
-    'End Sub
-
     Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
         ' Ubah status transaksi jadi selesai
         bukaKoneksi()
