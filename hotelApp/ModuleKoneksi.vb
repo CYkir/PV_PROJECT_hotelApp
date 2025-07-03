@@ -31,6 +31,7 @@ Module ModuleKoneksi
         Dim cmd As New SqlCommand("SELECT TOP 1 IdPengunjung FROM Pengunjung ORDER BY IdPengunjung DESC", koneksi)
         Dim lastId As String = cmd.ExecuteScalar()?.ToString()
         koneksi.Close()
+    
         Dim nomor As Integer = 1
         If Not String.IsNullOrEmpty(lastId) AndAlso lastId.Length >= 5 Then
             Integer.TryParse(lastId.Substring(2), nomor)
@@ -39,7 +40,9 @@ Module ModuleKoneksi
         Return "PG" & nomor.ToString("D3")
     End Function
 
+
     'generate kode transaksi
+
     Public Function GenerateKodeTransaksiBaru() As String
         bukaKoneksi()
         Dim today As String = DateTime.Now.ToString("ddMM")
