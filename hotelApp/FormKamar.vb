@@ -6,10 +6,26 @@ Public Class FormKamar
     Dim dataset As DataSet
     Dim gambarDipilih As String = ""
 
+    Private Sub GenerateKodeKamar()
+        bukaKoneksi()
+        Dim cmd As New SqlCommand("SELECT TOP 1 KodeKamar FROM Kamar ORDER BY KodeKamar DESC", koneksi)
+        Dim lastKode As String = cmd.ExecuteScalar()?.ToString()
+        koneksi.Close()
+
+        Dim nomor As Integer = 1
+        If Not String.IsNullOrEmpty(lastKode) AndAlso lastKode.Length >= 5 Then
+            Integer.TryParse(lastKode.Substring(2), nomor)
+            nomor += 1
+        End If
+
+        txtKodeKamar.Text = "KM" & nomor.ToString("D3")
+    End Sub
+
     Private Sub FormKamar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadData()
         LoadTipeKamar()
         LoadStatus()
+        GenerateKodeKamar()
     End Sub
 
     Private Sub LoadData()

@@ -1,7 +1,4 @@
 ﻿Imports Microsoft.Data.SqlClient
-Imports System.Diagnostics
-
-
 
 Public Class Form1
     Dim koneksi As New SqlConnection("Data Source=CYKIR\SQLEXPRESS;Initial Catalog=dbHotel;Integrated Security=True;TrustServerCertificate=True")
@@ -102,12 +99,15 @@ Public Class Form1
 
         If tombol.Text = "Check In" Then
             Dim form As New FormPengunjung
-            ' form.kodeKamarTerpilih = kodeKamar ' Jika pakai passing
+            form.KodeKamarTerpilih = kodeKamar ' Jika pakai passing
             form.ShowDialog()
         Else
             Dim form As New FormTransaksi
-            ' form.kodeKamarTerpilih = kodeKamar
+            form.KodeKamarTerpilih = kodeKamar
+            form.Mode = "CheckOut"
             form.ShowDialog()
+
+
         End If
 
         ' Refresh ulang tampilan kamar
