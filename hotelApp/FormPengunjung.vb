@@ -5,21 +5,7 @@ Public Class FormPengunjung
 
     Private Sub FormPengunjung_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtKodeKamar.Text = KodeKamarTerpilih
-        AutoGenerateIdPengunjung()
-    End Sub
-
-    Private Sub AutoGenerateIdPengunjung()
-        bukaKoneksi()
-        Dim cmd As New SqlCommand("SELECT TOP 1 IdPengunjung FROM Pengunjung ORDER BY IdPengunjung DESC", koneksi)
-        Dim lastId = cmd.ExecuteScalar()?.ToString()
-        koneksi.Close()
-
-        Dim nomor As Integer = 1
-        If Not String.IsNullOrEmpty(lastId) AndAlso lastId.Length >= 5 Then
-            Integer.TryParse(lastId.Substring(2), nomor)
-            nomor += 1
-        End If
-        txtIdPengunjung.Text = "PG" & nomor.ToString("D3")
+        txtIdPengunjung.Text = GenerateIdPengunjung()
     End Sub
 
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
@@ -92,23 +78,4 @@ Public Class FormPengunjung
         Me.Close()
     End Sub
 
-
-    Private Function GenerateKodeTransaksiBaru() As String
-        bukaKoneksi()
-        Dim today As String = DateTime.Now.ToString("ddMM")
-        Dim cmd As New SqlCommand("
-            SELECT TOP 1 KodeTransaksi FROM Transaksi 
-            WHERE KodeTransaksi LIKE 'TR" & today & "%' 
-            ORDER BY KodeTransaksi DESC", koneksi)
-        Dim lastKode As String = cmd.ExecuteScalar()?.ToString()
-        koneksi.Close()
-
-        Dim nomor As Integer = 1
-        If Not String.IsNullOrEmpty(lastKode) AndAlso lastKode.Length >= 9 Then
-            Integer.TryParse(lastKode.Substring(6), nomor)
-            nomor += 1
-        End If
-
-        Return "TR" & today & nomor.ToString("D3")
-    End Function
 End Class
