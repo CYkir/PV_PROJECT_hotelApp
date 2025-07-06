@@ -31,7 +31,7 @@ Module ModuleKoneksi
         Dim cmd As New SqlCommand("SELECT TOP 1 IdPengunjung FROM Pengunjung ORDER BY IdPengunjung DESC", koneksi)
         Dim lastId As String = cmd.ExecuteScalar()?.ToString()
         koneksi.Close()
-    
+
         Dim nomor As Integer = 1
         If Not String.IsNullOrEmpty(lastId) AndAlso lastId.Length >= 5 Then
             Integer.TryParse(lastId.Substring(2), nomor)
