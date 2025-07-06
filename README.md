@@ -41,12 +41,14 @@ Aplikasi ini menggunakan paket berikut:
 
 - `Microsoft.Data.SqlClient`
 - `Guna.UI2.WinForms`
+- `iTextSharp`
 
 Cara install melalui Package Manager Console:
 
 ```powershell
 Install-Package Microsoft.Data.SqlClient
 Install-Package Guna.UI2.WinForms
+Install-Package iTextSharp
 ```
 
 Atau gunakan GUI NuGet:
@@ -104,6 +106,7 @@ CREATE TABLE Transaksi (
     TanggalKeluar DATE NOT NULL,
     Durasi INT NOT NULL,
     TotalBayar INT NOT NULL,
+    StatusTransaksi NVARCHAR(20) NOT NULL CHECK (StatusTransaksi IN ('Aktif', 'Selesai')), -- [NEW]
     FOREIGN KEY (IdPengunjung) REFERENCES Pengunjung(IdPengunjung),
     FOREIGN KEY (KodeKamar) REFERENCES Kamar(KodeKamar)
 );
