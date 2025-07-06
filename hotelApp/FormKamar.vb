@@ -142,4 +142,5 @@ Public Class FormKamar
         pictureBoxKamar.Image = Nothing
         gambarDipilih = ""
     End Sub
+
 End Class

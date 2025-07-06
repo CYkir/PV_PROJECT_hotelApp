@@ -24,49 +24,18 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        panelKamarContainer = New FlowLayoutPanel()
-        btnTambahKamar = New Guna.UI2.WinForms.Guna2Button()
         TableLayoutPanel1 = New TableLayoutPanel()
         PictureBox1 = New PictureBox()
-        TableLayoutPanel2 = New TableLayoutPanel()
+        panelKamarContainer = New FlowLayoutPanel()
         TableLayoutPanel3 = New TableLayoutPanel()
+        btnTambahKamar = New Guna.UI2.WinForms.Guna2Button()
+        TableLayoutPanel2 = New TableLayoutPanel()
         txtDaftarKamar = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        TableLayoutPanel4 = New TableLayoutPanel()
         TableLayoutPanel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        TableLayoutPanel2.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
+        TableLayoutPanel2.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' panelKamarContainer
-        ' 
-        panelKamarContainer.AutoScroll = True
-        panelKamarContainer.Dock = DockStyle.Fill
-        panelKamarContainer.Location = New Point(3, 61)
-        panelKamarContainer.Name = "panelKamarContainer"
-        panelKamarContainer.Size = New Size(1089, 639)
-        panelKamarContainer.TabIndex = 7
-        ' 
-        ' btnTambahKamar
-        ' 
-        btnTambahKamar.BorderRadius = 15
-        btnTambahKamar.Cursor = Cursors.Hand
-        btnTambahKamar.CustomizableEdges = CustomizableEdges1
-        btnTambahKamar.DisabledState.BorderColor = Color.DarkGray
-        btnTambahKamar.DisabledState.CustomBorderColor = Color.DarkGray
-        btnTambahKamar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btnTambahKamar.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btnTambahKamar.Dock = DockStyle.Right
-        btnTambahKamar.FillColor = Color.FromArgb(CByte(255), CByte(219), CByte(91))
-        btnTambahKamar.Font = New Font("Poppins Medium", 9F, FontStyle.Bold)
-        btnTambahKamar.ForeColor = Color.Black
-        btnTambahKamar.HoverState.FillColor = Color.Gold
-        btnTambahKamar.Location = New Point(840, 3)
-        btnTambahKamar.Name = "btnTambahKamar"
-        btnTambahKamar.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        btnTambahKamar.Size = New Size(246, 46)
-        btnTambahKamar.TabIndex = 3
-        btnTambahKamar.Text = "Tambah Kamar"
         ' 
         ' TableLayoutPanel1
         ' 
@@ -98,21 +67,14 @@ Partial Class Form1
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
-        ' TableLayoutPanel2
+        ' panelKamarContainer
         ' 
-        TableLayoutPanel2.ColumnCount = 1
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.Controls.Add(TableLayoutPanel3, 0, 0)
-        TableLayoutPanel2.Controls.Add(TableLayoutPanel4, 0, 2)
-        TableLayoutPanel2.Controls.Add(panelKamarContainer, 0, 1)
-        TableLayoutPanel2.Location = New Point(278, 3)
-        TableLayoutPanel2.Name = "TableLayoutPanel2"
-        TableLayoutPanel2.RowCount = 3
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 645F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 59F))
-        TableLayoutPanel2.Size = New Size(1095, 762)
-        TableLayoutPanel2.TabIndex = 0
+        panelKamarContainer.AutoScroll = True
+        panelKamarContainer.Dock = DockStyle.Fill
+        panelKamarContainer.Location = New Point(3, 61)
+        panelKamarContainer.Name = "panelKamarContainer"
+        panelKamarContainer.Size = New Size(1089, 690)
+        panelKamarContainer.TabIndex = 7
         ' 
         ' TableLayoutPanel3
         ' 
@@ -131,6 +93,42 @@ Partial Class Form1
         TableLayoutPanel3.Size = New Size(1089, 52)
         TableLayoutPanel3.TabIndex = 0
         ' 
+        ' btnTambahKamar
+        ' 
+        btnTambahKamar.BorderRadius = 15
+        btnTambahKamar.Cursor = Cursors.Hand
+        btnTambahKamar.CustomizableEdges = CustomizableEdges1
+        btnTambahKamar.DisabledState.BorderColor = Color.DarkGray
+        btnTambahKamar.DisabledState.CustomBorderColor = Color.DarkGray
+        btnTambahKamar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnTambahKamar.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnTambahKamar.Dock = DockStyle.Right
+        btnTambahKamar.FillColor = Color.FromArgb(CByte(255), CByte(219), CByte(91))
+        btnTambahKamar.Font = New Font("Poppins Medium", 9F, FontStyle.Bold)
+        btnTambahKamar.ForeColor = Color.Black
+        btnTambahKamar.HoverState.FillColor = Color.Gold
+        btnTambahKamar.Location = New Point(840, 3)
+        btnTambahKamar.Name = "btnTambahKamar"
+        btnTambahKamar.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnTambahKamar.Size = New Size(246, 46)
+        btnTambahKamar.TabIndex = 3
+        btnTambahKamar.Text = "Tambah Kamar"
+        ' 
+        ' TableLayoutPanel2
+        ' 
+        TableLayoutPanel2.ColumnCount = 1
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.Controls.Add(TableLayoutPanel3, 0, 0)
+        TableLayoutPanel2.Controls.Add(panelKamarContainer, 0, 1)
+        TableLayoutPanel2.Location = New Point(278, 3)
+        TableLayoutPanel2.Name = "TableLayoutPanel2"
+        TableLayoutPanel2.RowCount = 3
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 696F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 8F))
+        TableLayoutPanel2.Size = New Size(1095, 762)
+        TableLayoutPanel2.TabIndex = 0
+        ' 
         ' txtDaftarKamar
         ' 
         txtDaftarKamar.AccessibleRole = AccessibleRole.TitleBar
@@ -146,20 +144,6 @@ Partial Class Form1
         txtDaftarKamar.Text = "Daftar Kamar"
         txtDaftarKamar.TextAlignment = ContentAlignment.MiddleLeft
         ' 
-        ' TableLayoutPanel4
-        ' 
-        TableLayoutPanel4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        TableLayoutPanel4.BackgroundImageLayout = ImageLayout.Stretch
-        TableLayoutPanel4.ColumnCount = 2
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 545F))
-        TableLayoutPanel4.Location = New Point(3, 706)
-        TableLayoutPanel4.Name = "TableLayoutPanel4"
-        TableLayoutPanel4.RowCount = 1
-        TableLayoutPanel4.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel4.Size = New Size(1089, 53)
-        TableLayoutPanel4.TabIndex = 8
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -171,19 +155,17 @@ Partial Class Form1
         Text = "Home Page"
         TableLayoutPanel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        TableLayoutPanel2.ResumeLayout(False)
         TableLayoutPanel3.ResumeLayout(False)
+        TableLayoutPanel2.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents panelKamarContainer As FlowLayoutPanel
-    Friend WithEvents btnTambahKamar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents btnTambahKamar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtDaftarKamar As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents panelKamarContainer As FlowLayoutPanel
 
 End Class

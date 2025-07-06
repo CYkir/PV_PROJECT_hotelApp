@@ -70,7 +70,7 @@ Public Class FormSlipPembayaran
                 doc.Add(New Paragraph("AKIRA HOTEL", fontJudul) With {.Alignment = Element.ALIGN_CENTER})
                 doc.Add(New Paragraph("Jl. Kayangan No.123, Kota Khayalan", fontIsi) With {.Alignment = Element.ALIGN_CENTER})
                 doc.Add(New Paragraph("Telp: 0812-1263-1234", fontIsi) With {.Alignment = Element.ALIGN_CENTER})
-                doc.Add(New Paragraph("====================================", fontIsi))
+                doc.Add(New Paragraph("===================================", fontIsi))
 
                 ' Info transaksi
                 Dim table As New PdfPTable(2)
@@ -110,7 +110,7 @@ Public Class FormSlipPembayaran
                 doc.Add(table)
 
                 ' Garis pembatas
-                doc.Add(New Paragraph("====================================", fontIsi))
+                doc.Add(New Paragraph("===================================", fontIsi))
 
                 ' Total Bayar
                 Dim paraTotal As New Paragraph("TOTAL BAYAR: " & lblTotalBayar.Text, fontBold)
@@ -118,7 +118,7 @@ Public Class FormSlipPembayaran
                 doc.Add(paraTotal)
 
                 ' Footer
-                doc.Add(New Paragraph("====================================", fontIsi))
+                doc.Add(New Paragraph("===================================", fontIsi))
                 doc.Add(New Paragraph("Terima kasih telah menginap!", fontIsi) With {.Alignment = Element.ALIGN_CENTER})
                 doc.Add(New Paragraph("Slip ini adalah bukti pembayaran sah.", fontIsi) With {.Alignment = Element.ALIGN_CENTER})
 

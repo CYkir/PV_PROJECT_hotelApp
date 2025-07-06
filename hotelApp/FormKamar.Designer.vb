@@ -41,9 +41,11 @@ Partial Class FormKamar
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -58,25 +60,17 @@ Partial Class FormKamar
         dgvKamar = New Guna.UI2.WinForms.Guna2DataGridView()
         txtStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         cmbStatus = New Guna.UI2.WinForms.Guna2ComboBox()
+        Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
         CType(pictureBoxKamar, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvKamar, ComponentModel.ISupportInitialize).BeginInit()
+        Guna2GroupBox1.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' Guna2HtmlLabel1
-        ' 
-        Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Poppins SemiBold", 12F, FontStyle.Bold)
-        Guna2HtmlLabel1.Location = New Point(74, 12)
-        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(187, 38)
-        Guna2HtmlLabel1.TabIndex = 0
-        Guna2HtmlLabel1.Text = "Input Data Kamar"
         ' 
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
         Guna2HtmlLabel2.Font = New Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel2.Location = New Point(74, 69)
+        Guna2HtmlLabel2.Location = New Point(63, 76)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Guna2HtmlLabel2.Size = New Size(107, 32)
         Guna2HtmlLabel2.TabIndex = 1
@@ -86,7 +80,7 @@ Partial Class FormKamar
         ' 
         Guna2HtmlLabel3.BackColor = Color.Transparent
         Guna2HtmlLabel3.Font = New Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel3.Location = New Point(74, 116)
+        Guna2HtmlLabel3.Location = New Point(63, 123)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(87, 32)
         Guna2HtmlLabel3.TabIndex = 2
@@ -96,7 +90,7 @@ Partial Class FormKamar
         ' 
         Guna2HtmlLabel4.BackColor = Color.Transparent
         Guna2HtmlLabel4.Font = New Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2HtmlLabel4.Location = New Point(74, 164)
+        Guna2HtmlLabel4.Location = New Point(63, 171)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Guna2HtmlLabel4.Size = New Size(99, 32)
         Guna2HtmlLabel4.TabIndex = 3
@@ -115,7 +109,7 @@ Partial Class FormKamar
         txtKodeKamar.Font = New Font("Segoe UI", 9F)
         txtKodeKamar.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtKodeKamar.IconLeftCursor = Cursors.IBeam
-        txtKodeKamar.Location = New Point(276, 69)
+        txtKodeKamar.Location = New Point(265, 76)
         txtKodeKamar.Margin = New Padding(3, 4, 3, 4)
         txtKodeKamar.Name = "txtKodeKamar"
         txtKodeKamar.PlaceholderText = "Masukan kode kamar"
@@ -137,7 +131,7 @@ Partial Class FormKamar
         btnSimpan.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSimpan.ForeColor = Color.White
         btnSimpan.HoverState.FillColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        btnSimpan.Location = New Point(74, 328)
+        btnSimpan.Location = New Point(63, 335)
         btnSimpan.Name = "btnSimpan"
         btnSimpan.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnSimpan.Size = New Size(130, 47)
@@ -157,7 +151,7 @@ Partial Class FormKamar
         txtNoKamar.Font = New Font("Segoe UI", 9F)
         txtNoKamar.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtNoKamar.IconLeftCursor = Cursors.IBeam
-        txtNoKamar.Location = New Point(276, 116)
+        txtNoKamar.Location = New Point(265, 123)
         txtNoKamar.Margin = New Padding(3, 4, 3, 4)
         txtNoKamar.Name = "txtNoKamar"
         txtNoKamar.PlaceholderText = "Masukan No Kamar"
@@ -178,7 +172,7 @@ Partial Class FormKamar
         cmbTipeKamar.Font = New Font("Segoe UI", 10F)
         cmbTipeKamar.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cmbTipeKamar.ItemHeight = 30
-        cmbTipeKamar.Location = New Point(276, 160)
+        cmbTipeKamar.Location = New Point(265, 167)
         cmbTipeKamar.Name = "cmbTipeKamar"
         cmbTipeKamar.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         cmbTipeKamar.Size = New Size(218, 36)
@@ -191,7 +185,7 @@ Partial Class FormKamar
         pictureBoxKamar.CustomizableEdges = CustomizableEdges9
         pictureBoxKamar.FillColor = Color.Gainsboro
         pictureBoxKamar.ImageRotate = 0F
-        pictureBoxKamar.Location = New Point(516, 69)
+        pictureBoxKamar.Location = New Point(505, 76)
         pictureBoxKamar.Name = "pictureBoxKamar"
         pictureBoxKamar.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         pictureBoxKamar.Size = New Size(230, 193)
@@ -209,7 +203,7 @@ Partial Class FormKamar
         btnPilihGambar.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         btnPilihGambar.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnPilihGambar.ForeColor = Color.White
-        btnPilihGambar.Location = New Point(574, 268)
+        btnPilihGambar.Location = New Point(563, 275)
         btnPilihGambar.Name = "btnPilihGambar"
         btnPilihGambar.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btnPilihGambar.Size = New Size(130, 38)
@@ -228,7 +222,7 @@ Partial Class FormKamar
         btnEdit.FillColor = Color.Gold
         btnEdit.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnEdit.ForeColor = Color.White
-        btnEdit.Location = New Point(266, 328)
+        btnEdit.Location = New Point(255, 335)
         btnEdit.Name = "btnEdit"
         btnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnEdit.Size = New Size(130, 47)
@@ -248,7 +242,7 @@ Partial Class FormKamar
         btnHapus.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnHapus.ForeColor = Color.White
         btnHapus.HoverState.FillColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
-        btnHapus.Location = New Point(443, 328)
+        btnHapus.Location = New Point(432, 335)
         btnHapus.Name = "btnHapus"
         btnHapus.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         btnHapus.Size = New Size(130, 47)
@@ -274,17 +268,26 @@ Partial Class FormKamar
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
         dgvKamar.DefaultCellStyle = DataGridViewCellStyle3
+        dgvKamar.EnableHeadersVisualStyles = True
         dgvKamar.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        dgvKamar.Location = New Point(74, 413)
+        dgvKamar.Location = New Point(63, 421)
         dgvKamar.Name = "dgvKamar"
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Control
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dgvKamar.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         dgvKamar.RowHeadersVisible = False
         dgvKamar.RowHeadersWidth = 48
-        dgvKamar.Size = New Size(672, 224)
+        dgvKamar.Size = New Size(672, 223)
         dgvKamar.TabIndex = 14
         dgvKamar.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         dgvKamar.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -312,7 +315,7 @@ Partial Class FormKamar
         ' 
         txtStatus.BackColor = Color.Transparent
         txtStatus.Font = New Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtStatus.Location = New Point(74, 225)
+        txtStatus.Location = New Point(63, 232)
         txtStatus.Name = "txtStatus"
         txtStatus.Size = New Size(56, 32)
         txtStatus.TabIndex = 15
@@ -330,42 +333,55 @@ Partial Class FormKamar
         cmbStatus.Font = New Font("Segoe UI", 10F)
         cmbStatus.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         cmbStatus.ItemHeight = 30
-        cmbStatus.Location = New Point(276, 215)
+        cmbStatus.Location = New Point(265, 222)
         cmbStatus.Name = "cmbStatus"
         cmbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         cmbStatus.Size = New Size(218, 36)
         cmbStatus.TabIndex = 16
+        ' 
+        ' Guna2GroupBox1
+        ' 
+        Guna2GroupBox1.BorderRadius = 15
+        Guna2GroupBox1.Controls.Add(cmbStatus)
+        Guna2GroupBox1.Controls.Add(btnHapus)
+        Guna2GroupBox1.Controls.Add(txtStatus)
+        Guna2GroupBox1.Controls.Add(Guna2HtmlLabel2)
+        Guna2GroupBox1.Controls.Add(dgvKamar)
+        Guna2GroupBox1.Controls.Add(Guna2HtmlLabel3)
+        Guna2GroupBox1.Controls.Add(Guna2HtmlLabel4)
+        Guna2GroupBox1.Controls.Add(btnEdit)
+        Guna2GroupBox1.Controls.Add(txtKodeKamar)
+        Guna2GroupBox1.Controls.Add(btnPilihGambar)
+        Guna2GroupBox1.Controls.Add(btnSimpan)
+        Guna2GroupBox1.Controls.Add(pictureBoxKamar)
+        Guna2GroupBox1.Controls.Add(txtNoKamar)
+        Guna2GroupBox1.Controls.Add(cmbTipeKamar)
+        Guna2GroupBox1.CustomBorderColor = Color.FromArgb(CByte(255), CByte(219), CByte(91))
+        Guna2GroupBox1.CustomizableEdges = CustomizableEdges19
+        Guna2GroupBox1.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2GroupBox1.ForeColor = Color.Black
+        Guna2GroupBox1.Location = New Point(30, 12)
+        Guna2GroupBox1.Name = "Guna2GroupBox1"
+        Guna2GroupBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        Guna2GroupBox1.Size = New Size(758, 673)
+        Guna2GroupBox1.TabIndex = 17
+        Guna2GroupBox1.Text = "Input Data Kamar"
         ' 
         ' FormKamar
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ControlLightLight
-        ClientSize = New Size(800, 711)
-        Controls.Add(cmbStatus)
-        Controls.Add(txtStatus)
-        Controls.Add(dgvKamar)
-        Controls.Add(btnHapus)
-        Controls.Add(btnEdit)
-        Controls.Add(btnPilihGambar)
-        Controls.Add(pictureBoxKamar)
-        Controls.Add(cmbTipeKamar)
-        Controls.Add(txtNoKamar)
-        Controls.Add(btnSimpan)
-        Controls.Add(txtKodeKamar)
-        Controls.Add(Guna2HtmlLabel4)
-        Controls.Add(Guna2HtmlLabel3)
-        Controls.Add(Guna2HtmlLabel2)
-        Controls.Add(Guna2HtmlLabel1)
+        ClientSize = New Size(806, 720)
+        Controls.Add(Guna2GroupBox1)
         Name = "FormKamar"
         Text = "FormKamar"
         CType(pictureBoxKamar, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvKamar, ComponentModel.ISupportInitialize).EndInit()
+        Guna2GroupBox1.ResumeLayout(False)
+        Guna2GroupBox1.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -380,4 +396,5 @@ Partial Class FormKamar
     Friend WithEvents dgvKamar As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents txtStatus As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents cmbStatus As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
 End Class
