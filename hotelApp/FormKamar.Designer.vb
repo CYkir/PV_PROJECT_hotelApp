@@ -182,7 +182,6 @@ Partial Class FormKamar
         pictureBoxKamar.BackColor = SystemColors.ControlDark
         pictureBoxKamar.BorderRadius = 15
         pictureBoxKamar.CustomizableEdges = CustomizableEdges9
-        pictureBoxKamar.FillColor = Color.Gainsboro
         pictureBoxKamar.ImageRotate = 0F
         pictureBoxKamar.Location = New Point(505, 76)
         pictureBoxKamar.Name = "pictureBoxKamar"
