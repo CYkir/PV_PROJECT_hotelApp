@@ -42,7 +42,6 @@ Module ModuleKoneksi
 
 
     'generate kode transaksi
-
     Public Function GenerateKodeTransaksiBaru() As String
         bukaKoneksi()
         Dim today As String = DateTime.Now.ToString("ddMM")

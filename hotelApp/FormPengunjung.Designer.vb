@@ -113,7 +113,7 @@ Partial Class FormPengunjung
         txtNoKTP.Location = New Point(141, 189)
         txtNoKTP.Margin = New Padding(3, 4, 3, 4)
         txtNoKTP.Name = "txtNoKTP"
-        txtNoKTP.PlaceholderText = ""
+        txtNoKTP.PlaceholderText = "No KTP / NIK"
         txtNoKTP.SelectedText = ""
         txtNoKTP.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         txtNoKTP.Size = New Size(363, 37)
@@ -144,7 +144,7 @@ Partial Class FormPengunjung
         txtNama.Location = New Point(142, 278)
         txtNama.Margin = New Padding(3, 4, 3, 4)
         txtNama.Name = "txtNama"
-        txtNama.PlaceholderText = ""
+        txtNama.PlaceholderText = "Nama Lengkap"
         txtNama.SelectedText = ""
         txtNama.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         txtNama.Size = New Size(363, 37)
@@ -175,7 +175,7 @@ Partial Class FormPengunjung
         Guna2TextBox2.Location = New Point(141, 442)
         Guna2TextBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2TextBox2.Name = "Guna2TextBox2"
-        Guna2TextBox2.PlaceholderText = ""
+        Guna2TextBox2.PlaceholderText = "Alamat Lengkap"
         Guna2TextBox2.SelectedText = ""
         Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2TextBox2.Size = New Size(363, 37)
@@ -327,7 +327,7 @@ Partial Class FormPengunjung
         txtNoTelp.Location = New Point(140, 358)
         txtNoTelp.Margin = New Padding(3, 4, 3, 4)
         txtNoTelp.Name = "txtNoTelp"
-        txtNoTelp.PlaceholderText = ""
+        txtNoTelp.PlaceholderText = "No Telp / WA"
         txtNoTelp.SelectedText = ""
         txtNoTelp.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         txtNoTelp.Size = New Size(363, 37)
