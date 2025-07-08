@@ -24,17 +24,20 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         TableLayoutPanel1 = New TableLayoutPanel()
         PictureBox1 = New PictureBox()
-        panelKamarContainer = New FlowLayoutPanel()
+        TableLayoutPanel2 = New TableLayoutPanel()
         TableLayoutPanel3 = New TableLayoutPanel()
         btnTambahKamar = New Guna.UI2.WinForms.Guna2Button()
-        TableLayoutPanel2 = New TableLayoutPanel()
         txtDaftarKamar = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        panelKamarContainer = New FlowLayoutPanel()
+        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         TableLayoutPanel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        TableLayoutPanel3.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
+        TableLayoutPanel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -67,14 +70,21 @@ Partial Class Form1
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
-        ' panelKamarContainer
+        ' TableLayoutPanel2
         ' 
-        panelKamarContainer.AutoScroll = True
-        panelKamarContainer.Dock = DockStyle.Fill
-        panelKamarContainer.Location = New Point(3, 61)
-        panelKamarContainer.Name = "panelKamarContainer"
-        panelKamarContainer.Size = New Size(1089, 690)
-        panelKamarContainer.TabIndex = 7
+        TableLayoutPanel2.ColumnCount = 1
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.Controls.Add(TableLayoutPanel3, 0, 0)
+        TableLayoutPanel2.Controls.Add(panelKamarContainer, 0, 1)
+        TableLayoutPanel2.Controls.Add(Guna2Button1, 0, 2)
+        TableLayoutPanel2.Location = New Point(278, 3)
+        TableLayoutPanel2.Name = "TableLayoutPanel2"
+        TableLayoutPanel2.RowCount = 3
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 654F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
+        TableLayoutPanel2.Size = New Size(1095, 762)
+        TableLayoutPanel2.TabIndex = 0
         ' 
         ' TableLayoutPanel3
         ' 
@@ -114,21 +124,6 @@ Partial Class Form1
         btnTambahKamar.TabIndex = 3
         btnTambahKamar.Text = "Tambah Kamar"
         ' 
-        ' TableLayoutPanel2
-        ' 
-        TableLayoutPanel2.ColumnCount = 1
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.Controls.Add(TableLayoutPanel3, 0, 0)
-        TableLayoutPanel2.Controls.Add(panelKamarContainer, 0, 1)
-        TableLayoutPanel2.Location = New Point(278, 3)
-        TableLayoutPanel2.Name = "TableLayoutPanel2"
-        TableLayoutPanel2.RowCount = 3
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 696F))
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 8F))
-        TableLayoutPanel2.Size = New Size(1095, 762)
-        TableLayoutPanel2.TabIndex = 0
-        ' 
         ' txtDaftarKamar
         ' 
         txtDaftarKamar.AccessibleRole = AccessibleRole.TitleBar
@@ -144,6 +139,34 @@ Partial Class Form1
         txtDaftarKamar.Text = "Daftar Kamar"
         txtDaftarKamar.TextAlignment = ContentAlignment.MiddleLeft
         ' 
+        ' panelKamarContainer
+        ' 
+        panelKamarContainer.AutoScroll = True
+        panelKamarContainer.Dock = DockStyle.Fill
+        panelKamarContainer.Location = New Point(3, 61)
+        panelKamarContainer.Name = "panelKamarContainer"
+        panelKamarContainer.Size = New Size(1089, 648)
+        panelKamarContainer.TabIndex = 7
+        ' 
+        ' Guna2Button1
+        ' 
+        Guna2Button1.BorderRadius = 15
+        Guna2Button1.CustomizableEdges = CustomizableEdges3
+        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2Button1.Dock = DockStyle.Left
+        Guna2Button1.FillColor = Color.FromArgb(CByte(255), CByte(219), CByte(91))
+        Guna2Button1.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2Button1.ForeColor = Color.Black
+        Guna2Button1.Location = New Point(3, 715)
+        Guna2Button1.Name = "Guna2Button1"
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2Button1.Size = New Size(225, 44)
+        Guna2Button1.TabIndex = 8
+        Guna2Button1.Text = "Riwayat"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -155,8 +178,8 @@ Partial Class Form1
         Text = "Home Page"
         TableLayoutPanel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        TableLayoutPanel3.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)
+        TableLayoutPanel3.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -167,5 +190,6 @@ Partial Class Form1
     Friend WithEvents btnTambahKamar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtDaftarKamar As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents panelKamarContainer As FlowLayoutPanel
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 
 End Class

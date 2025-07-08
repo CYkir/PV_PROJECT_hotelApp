@@ -111,7 +111,12 @@ Public Class Form1
     End Sub
 
     Private Sub btnTambahKamar_Click(sender As Object, e As EventArgs) Handles btnTambahKamar.Click
-        FormKamar.ShowDialog()
-        TampilkanKamar()
+        FormKamar.ShowDialog
+        TampilkanKamar
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        FormRiwayat.ShowDialog()
+
     End Sub
 End Class
