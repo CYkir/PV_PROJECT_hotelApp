@@ -38,14 +38,13 @@ Partial Class FormKamar
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -57,13 +56,13 @@ Partial Class FormKamar
         btnPilihGambar = New Guna.UI2.WinForms.Guna2Button()
         btnEdit = New Guna.UI2.WinForms.Guna2Button()
         btnHapus = New Guna.UI2.WinForms.Guna2Button()
-        dgvKamar = New Guna.UI2.WinForms.Guna2DataGridView()
         txtStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         cmbStatus = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        dgvKamar = New Guna.UI2.WinForms.Guna2DataGridView()
         CType(pictureBoxKamar, ComponentModel.ISupportInitialize).BeginInit()
-        CType(dgvKamar, ComponentModel.ISupportInitialize).BeginInit()
         Guna2GroupBox1.SuspendLayout()
+        CType(dgvKamar, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2HtmlLabel2
@@ -249,68 +248,6 @@ Partial Class FormKamar
         btnHapus.TabIndex = 13
         btnHapus.Text = "Hapus"
         ' 
-        ' dgvKamar
-        ' 
-        dgvKamar.AllowUserToOrderColumns = True
-        DataGridViewCellStyle1.BackColor = Color.White
-        dgvKamar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        dgvKamar.BackgroundColor = Color.Gainsboro
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle2.ForeColor = Color.White
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dgvKamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        dgvKamar.ColumnHeadersHeight = 4
-        dgvKamar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = Color.White
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        dgvKamar.DefaultCellStyle = DataGridViewCellStyle3
-        dgvKamar.EnableHeadersVisualStyles = True
-        dgvKamar.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        dgvKamar.Location = New Point(63, 421)
-        dgvKamar.Name = "dgvKamar"
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = SystemColors.Control
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        dgvKamar.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        dgvKamar.RowHeadersVisible = False
-        dgvKamar.RowHeadersWidth = 48
-        dgvKamar.Size = New Size(672, 223)
-        dgvKamar.TabIndex = 14
-        dgvKamar.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
-        dgvKamar.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        dgvKamar.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
-        dgvKamar.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
-        dgvKamar.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
-        dgvKamar.ThemeStyle.BackColor = Color.Gainsboro
-        dgvKamar.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        dgvKamar.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        dgvKamar.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        dgvKamar.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
-        dgvKamar.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        dgvKamar.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        dgvKamar.ThemeStyle.HeaderStyle.Height = 4
-        dgvKamar.ThemeStyle.ReadOnly = False
-        dgvKamar.ThemeStyle.RowsStyle.BackColor = Color.White
-        dgvKamar.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        dgvKamar.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9F)
-        dgvKamar.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        dgvKamar.ThemeStyle.RowsStyle.Height = 29
-        dgvKamar.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        dgvKamar.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        ' 
         ' txtStatus
         ' 
         txtStatus.BackColor = Color.Transparent
@@ -342,11 +279,11 @@ Partial Class FormKamar
         ' Guna2GroupBox1
         ' 
         Guna2GroupBox1.BorderRadius = 15
+        Guna2GroupBox1.Controls.Add(dgvKamar)
         Guna2GroupBox1.Controls.Add(cmbStatus)
         Guna2GroupBox1.Controls.Add(btnHapus)
         Guna2GroupBox1.Controls.Add(txtStatus)
         Guna2GroupBox1.Controls.Add(Guna2HtmlLabel2)
-        Guna2GroupBox1.Controls.Add(dgvKamar)
         Guna2GroupBox1.Controls.Add(Guna2HtmlLabel3)
         Guna2GroupBox1.Controls.Add(Guna2HtmlLabel4)
         Guna2GroupBox1.Controls.Add(btnEdit)
@@ -367,6 +304,60 @@ Partial Class FormKamar
         Guna2GroupBox1.TabIndex = 17
         Guna2GroupBox1.Text = "Input Data Kamar"
         ' 
+        ' dgvKamar
+        ' 
+        DataGridViewCellStyle1.BackColor = Color.White
+        dgvKamar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        dgvKamar.BackgroundColor = Color.Snow
+        dgvKamar.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        DataGridViewCellStyle2.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvKamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgvKamar.ColumnHeadersHeight = 4
+        dgvKamar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.White
+        DataGridViewCellStyle3.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.ForeColor = Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        dgvKamar.DefaultCellStyle = DataGridViewCellStyle3
+        dgvKamar.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvKamar.Location = New Point(21, 424)
+        dgvKamar.Margin = New Padding(4)
+        dgvKamar.Name = "dgvKamar"
+        dgvKamar.RowHeadersVisible = False
+        dgvKamar.RowHeadersWidth = 51
+        dgvKamar.Size = New Size(714, 230)
+        dgvKamar.TabIndex = 17
+        dgvKamar.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        dgvKamar.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        dgvKamar.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
+        dgvKamar.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
+        dgvKamar.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
+        dgvKamar.ThemeStyle.BackColor = Color.Snow
+        dgvKamar.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvKamar.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        dgvKamar.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        dgvKamar.ThemeStyle.HeaderStyle.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        dgvKamar.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        dgvKamar.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        dgvKamar.ThemeStyle.HeaderStyle.Height = 4
+        dgvKamar.ThemeStyle.ReadOnly = False
+        dgvKamar.ThemeStyle.RowsStyle.BackColor = Color.White
+        dgvKamar.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        dgvKamar.ThemeStyle.RowsStyle.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        dgvKamar.ThemeStyle.RowsStyle.ForeColor = Color.Black
+        dgvKamar.ThemeStyle.RowsStyle.Height = 29
+        dgvKamar.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dgvKamar.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        ' 
         ' FormKamar
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -377,9 +368,9 @@ Partial Class FormKamar
         Name = "FormKamar"
         Text = "FormKamar"
         CType(pictureBoxKamar, ComponentModel.ISupportInitialize).EndInit()
-        CType(dgvKamar, ComponentModel.ISupportInitialize).EndInit()
         Guna2GroupBox1.ResumeLayout(False)
         Guna2GroupBox1.PerformLayout()
+        CType(dgvKamar, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -393,8 +384,8 @@ Partial Class FormKamar
     Friend WithEvents btnPilihGambar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnEdit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnHapus As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents dgvKamar As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents txtStatus As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents cmbStatus As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents dgvKamar As Guna.UI2.WinForms.Guna2DataGridView
 End Class

@@ -24,6 +24,22 @@ Public Class FormKamar
         adapter.Fill(dataset, "Kamar")
         dgvKamar.DataSource = dataset.Tables("Kamar")
         koneksi.Close()
+
+        dgvKamar.DefaultCellStyle.Font = New Font("Poppins", 10, FontStyle.Regular)
+        dgvKamar.ColumnHeadersDefaultCellStyle.Font = New Font("Poppins", 10, FontStyle.Bold)
+
+        'penyembunyian kolom GambarPath
+        If dgvKamar.Columns.Contains("GambarPath") Then
+            dgvKamar.Columns("GambarPath").Visible = False
+        End If
+
+        dgvKamar.Columns("KodeKamar").HeaderText = "Kode Kamar"
+        dgvKamar.Columns("NoKamar").HeaderText = "No Kamar"
+        dgvKamar.Columns("NamaTipe").HeaderText = "Tipe Kamar"
+        dgvKamar.Columns("Status").HeaderText = "Status"
+
+
+        dgvKamar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
 
     Private Sub LoadTipeKamar()
