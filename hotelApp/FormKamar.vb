@@ -11,6 +11,8 @@ Public Class FormKamar
         LoadTipeKamar()
         LoadStatus()
         txtKodeKamar.Text = GenerateKodeKamar()
+
+        GroupBoxTipeKamar.Visible = False
     End Sub
 
     Private Sub LoadData()
@@ -159,4 +161,38 @@ Public Class FormKamar
         gambarDipilih = ""
     End Sub
 
+    Private Sub btnTambahTipe_Click(sender As Object, e As EventArgs) Handles btnTambahTipe.Click
+        GroupBoxInputKamar.Visible = False
+        GroupBoxTipeKamar.Visible = True
+        txtKodeTipe.Text = GenerateKodeTipe()
+    End Sub
+
+    Private Sub btnSimpanTipe_Click(sender As Object, e As EventArgs) Handles btnSimpanTipe.Click
+        If txtKodeTipe.Text = "" Or txtNamaTipe.Text = "" Or txtHarga.Text = "" Then
+            MsgBox("Lengkapi semua data!")
+            Exit Sub
+        End If
+
+        bukaKoneksi()
+        Dim cmd As New SqlCommand("INSERT INTO TipeKamar (KodeTipe, NamaTipe, HargaPerMalam) VALUES (@kode, @nama, @harga)", koneksi)
+        cmd.Parameters.AddWithValue("@kode", txtKodeTipe.Text)
+        cmd.Parameters.AddWithValue("@nama", txtNamaTipe.Text)
+        cmd.Parameters.AddWithValue("@harga", Val(txtHarga.Text))
+        cmd.ExecuteNonQuery()
+        koneksi.Close()
+
+        MsgBox("Tipe kamar berhasil disimpan!")
+
+        ' Reload tipe kamar ke ComboBox
+        LoadTipeKamar()
+
+        ' Sembunyikan GroupBox Tipe, tampilkan kembali input kamar
+        GroupBoxTipeKamar.Visible = False
+        GroupBoxInputKamar.Visible = True
+    End Sub
+
+    Private Sub btnBatalTipe_Click(sender As Object, e As EventArgs) Handles btnBatalTipe.Click
+        GroupBoxTipeKamar.Visible = False
+        GroupBoxInputKamar.Visible = True
+    End Sub
 End Class

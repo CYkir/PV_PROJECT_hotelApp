@@ -61,5 +61,22 @@ Module ModuleKoneksi
         Return "TR" & today & nomor.ToString("D3")
     End Function
 
+    ' Generate kode tipe kamar otomatis dengan format TP001, TP002, dst.
+    Public Function GenerateKodeTipe() As String
+        bukaKoneksi()
+        Dim cmd As New SqlCommand("SELECT TOP 1 KodeTipe FROM TipeKamar ORDER BY KodeTipe DESC", koneksi)
+        Dim lastKode As String = cmd.ExecuteScalar()?.ToString()
+        koneksi.Close()
+
+        Dim nomor As Integer = 1
+        If Not String.IsNullOrEmpty(lastKode) AndAlso lastKode.Length >= 5 Then
+            Integer.TryParse(lastKode.Substring(2), nomor)
+            nomor += 1
+        End If
+
+        Return "TP" & nomor.ToString("D3")
+    End Function
+
+
 End Module
 
