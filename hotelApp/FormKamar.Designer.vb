@@ -418,7 +418,7 @@ Partial Class FormKamar
         GroupBoxTipeKamar.CustomizableEdges = CustomizableEdges33
         GroupBoxTipeKamar.Font = New Font("Poppins SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GroupBoxTipeKamar.ForeColor = Color.Black
-        GroupBoxTipeKamar.Location = New Point(32, 14)
+        GroupBoxTipeKamar.Location = New Point(32, 12)
         GroupBoxTipeKamar.Name = "GroupBoxTipeKamar"
         GroupBoxTipeKamar.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         GroupBoxTipeKamar.Size = New Size(523, 299)
